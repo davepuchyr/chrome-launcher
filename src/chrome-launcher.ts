@@ -143,7 +143,7 @@ class Launcher {
     flags.push(`--remote-debugging-port=${this.port}`);
 
     if (getPlatform() === 'linux') {
-      flags.push('--disable-setuid-sandbox');
+      // dmjp: this causes a warning tab as of 2018.05.05 flags.push('--disable-setuid-sandbox');
     }
 
     if (!this.useDefaultProfile) {
@@ -153,7 +153,7 @@ class Launcher {
     }
 
     flags.push(...this.chromeFlags);
-    flags.push(this.startingUrl);
+    // dmjp this opens a tab every time chrome is launched, so if launched repeatedly these tabs accummulate flags.push(this.startingUrl);
 
     return flags;
   }
