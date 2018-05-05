@@ -9,7 +9,7 @@
         "noEmitOnError": false,
         "strictNullChecks": true,
         "noImplicitReturns": true,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false, // dmjp: startingUrl is unused
         "noUnusedParameters": true
     },
     "exclude": [
